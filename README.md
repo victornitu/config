@@ -1,0 +1,2 @@
+# config
+personal computer configuration
