@@ -14,17 +14,8 @@ set __fish_git_prompt_color_branch yellow
 set __fish_git_prompt_color_upstream_ahead green
 set __fish_git_prompt_color_upstream_behind red
 
-# Status Chars
-set __fish_git_prompt_char_dirtystate '*'
-set __fish_git_prompt_char_stagedstate '→'
-set __fish_git_prompt_char_untrackedfiles '?'
-set __fish_git_prompt_char_stashstate '↩'
-set __fish_git_prompt_char_upstream_ahead '+'
-set __fish_git_prompt_char_upstream_behind '-'
-
 function fish_prompt
-    set -l git_branch (git branch ^/dev/null | sed -n '/\* /s///p')
-    set -g fish_prompt_pwd_dir_length 0
+	set -g fish_prompt_pwd_dir_length 0
 	printf '%s' (set_color green)(whoami)
     printf '%s' (set_color white)'@'
 	printf '%s' (set_color blue)(hostname | cut -d . -f 1)
