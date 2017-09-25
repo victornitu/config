@@ -15,15 +15,14 @@ set __fish_git_prompt_color_upstream_ahead green
 set __fish_git_prompt_color_upstream_behind red
 
 function fish_prompt
-	set -g fish_prompt_pwd_dir_length 0
-	printf '%s' (set_color green)(whoami)
+    printf '%s' (set_color green)(whoami)
     printf '%s' (set_color white)'@'
-	printf '%s' (set_color blue)(hostname | cut -d . -f 1)
-	printf '%s' (set_color white)':'
-	printf '%s' (set_color cyan)(prompt_pwd)
-	printf '%s' (set_color white)':'
-	printf '%s' (__fish_git_prompt)
-	printf '%s' (set_color white)' > '
+    printf '%s' (set_color blue)(hostname | cut -d . -f 1)
+    printf '%s' (set_color white)':'
+    printf '%s' (set_color cyan)(prompt_pwd)
+    printf '%s' (set_color white)':'
+    printf '%s' (__fish_git_prompt)
+    printf '%s' (set_color white)' > '
 end
 
 function fish_right_prompt -d "Write out the right prompt"
