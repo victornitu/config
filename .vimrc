@@ -14,7 +14,10 @@ Plugin 'moll/vim-node'
 Plugin 'othree/yajs.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ekalinin/Dockerfile.vim'
-
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'elmcast/elm-vim'
+Plugin 'digitaltoad/vim-pug'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -32,9 +35,12 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set number
-set tabstop=4
-set softtabstop=0 noexpandtab
-set shiftwidth=4
+set tabstop=2
+set expandtab
+set shiftwidth=2
+
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 syntax enable
 colorscheme monokai
+
